@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier le produit : {{ produit.nom }}{% endblock %}
+
+{% block body %}
+<section class="py-4">
+    <h1 class="mb-4 fw-bold">Modifier le produit</h1>
+
+    <div class="row g-5">
+        <div class="col-md-6">
+            {{ form_start(form) }}
+                <div class="mb-3">
+                    {{ form_label(form.nom, null, {'label_attr': {'class': 'form-label fw-semibold'}}) }}
+                    {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.nom) }}
+                </div>
+
+                <div class="mb-3">
+                    {{ form_label(form.prix, null, {'label_attr': {'class': 'form-label fw-semibold'}}) }}
+                    {{ form_widget(form.prix, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.prix) }}
+                </div>
+
+                <div class="mb-3">
+                    {{ form_label(form.category, null, {'label_attr': {'class': 'form-label fw-semibold'}}) }}
+                    {{ form_widget(form.category, {'attr': {'class': 'form-select'}}) }}
+                    {{ form_errors(form.category) }}
+                </div>
+
+                <div class="mb-3">
+                    {{ form_label(form.description, null, {'label_attr': {'class': 'form-label fw-semibold'}}) }}
+                    {{ form_widget(form.description, {'attr': {'class': 'form-control', 'rows': 5}}) }}
+                    {{ form_errors(form.description) }}
+                </div>
+
+                <div class="d-flex gap-2 mt-4">
+                    <button type="submit" class="btn btn-dark">Enregistrer</button>
+                    <a href="{{ path('app_admin_produit_index') }}" class="btn btn-outline-secondary">Annuler</a>
+                </div>
+            {{ form_end(form) }}
+        </div>
+
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title fw-semibold mb-3">Détails du produit</h5>
+                    <p class="mb-1"><strong>Créé par :</strong> 
+                        {% if produit.createdBy %}
+                            {{ produit.createdBy.prenom }} {{ produit.createdBy.nom }}
+                        {% else %}
+                            <span class="text-muted">—</span>
+                        {% endif %}
+                    </p>
+                    <p class="mb-1"><strong>Ajouté le :</strong> 
+                        {{ produit.createdAt ? produit.createdAt|date('d/m/Y H:i') : '—' }}
+                    </p>
+                    <p class="mb-0"><strong>Dernière modification :</strong> 
+                        {{ produit.updatedAt ? produit.updatedAt|date('d/m/Y H:i') : '—' }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

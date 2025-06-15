@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier mon profil{% endblock %}
+
+{% block body %}
+<section class="py-4">
+    <h1 class="fw-bold mb-4"> Modifier mes informations</h1>
+
+    <div class="row gy-4">
+        <!-- Colonne gauche : Formulaire -->
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    {{ form_start(form) }}
+
+                    <div class="mb-3">
+                        {{ form_label(form.nom, 'Nom') }}
+                        {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(form.nom) }}
+                    </div>
+
+                    <div class="mb-3">
+                        {{ form_label(form.prenom, 'Prénom') }}
+                        {{ form_widget(form.prenom, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(form.prenom) }}
+                    </div>
+
+                    <div class="d-flex justify-content-between mt-4">
+                        <button type="submit" class="btn btn-success">
+                             Enregistrer
+                        </button>
+                        <a href="{{ path('app_profile') }}" class="btn btn-outline-secondary">
+                            Retour
+                        </a>
+                    </div>
+
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Colonne droite : Infos non modifiables -->
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title fw-semibold">Informations liées au compte</h5>
+                    
+                    <dl class="row mt-3">
+                        <dt class="col-sm-4 text-muted">Email</dt>
+                        <dd class="col-sm-8">{{ app.user.email }}</dd>
+
+                        <dt class="col-sm-4 text-muted">Points</dt>
+                        <dd class="col-sm-8">
+                            <strong class="text-success">{{ app.user.points }}</strong>
+                        </dd>
+
+                        <dt class="col-sm-4 text-muted">Statut</dt>
+                        <dd class="col-sm-8">
+                            {% if app.user.actif %}
+                                <span class="badge bg-success">Actif</span>
+                            {% else %}
+                                <span class="badge bg-warning text-dark">Désactivé</span>
+                            {% endif %}
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

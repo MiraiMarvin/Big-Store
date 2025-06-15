@@ -1,0 +1,54 @@
+# translations/messages.fr.yaml
+
+# Page d'accueil
+home:
+  title: "Accueil - Boutique Points"
+  welcome: "Bienvenue sur la Boutique Points"
+  subtitle: "Utilisez vos points pour accéder à des produits exclusifs"
+  hello: "Bonjour %prenom% %nom%, ravi de vous revoir."
+  balance: "Solde disponible :"
+  coins: "coins"
+  browse_products: "Parcourir les produits"
+  connect_message: "Connectez-vous pour profiter de votre solde et explorer les produits."
+  login: "Connexion"
+  register: "Inscription"
+
+# Tableau de bord
+dashboard:
+  balance_title: "Solde"
+  balance_description: "Coins disponibles pour vos achats"
+  notifications_title: "Notifications"
+  notifications_access: "Accéder aux notifications"
+  account_status_title: "Statut du compte"
+  account_active: "Actif"
+  account_active_desc: "Votre compte est activé"
+  account_inactive: "Inactif"
+  account_inactive_desc: "Compte désactivé"
+
+# Navigation
+nav:
+  home: "Accueil"
+  products: "Produits"
+  profile: "Mon Profil"
+  admin: "Administration"
+  login: "Connexion"
+  logout: "Déconnexion"
+  register: "Inscription"
+
+# Boutons généraux
+btn:
+  save: "Enregistrer"
+  cancel: "Annuler"
+  edit: "Modifier"
+  delete: "Supprimer"
+  create: "Créer"
+  submit: "Valider"
+  back: "Retour"
+  view: "Voir"
+
+# Langues
+language:
+  french: "Français"
+  english: "English"
+  switch_to_en: "English"
+  switch_to_fr: "Français"

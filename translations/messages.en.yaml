@@ -1,0 +1,54 @@
+
+
+# Home page
+home:
+  title: "Home - Points Store"
+  welcome: "Welcome to the Points Store"
+  subtitle: "Use your points to access exclusive products"
+  hello: "Hello %prenom% %nom%, nice to see you again."
+  balance: "Available balance:"
+  coins: "coins"
+  browse_products: "Browse products"
+  connect_message: "Sign in to enjoy your balance and explore products."
+  login: "Login"
+  register: "Sign up"
+
+# Dashboard
+dashboard:
+  balance_title: "Balance"
+  balance_description: "Coins available for your purchases"
+  notifications_title: "Notifications"
+  notifications_access: "Access notifications"
+  account_status_title: "Account status"
+  account_active: "Active"
+  account_active_desc: "Your account is activated"
+  account_inactive: "Inactive"
+  account_inactive_desc: "Account disabled"
+
+# Navigation
+nav:
+  home: "Home"
+  products: "Products"
+  profile: "My Profile"
+  admin: "Administration"
+  login: "Login"
+  logout: "Logout"
+  register: "Sign up"
+
+# General buttons
+btn:
+  save: "Save"
+  cancel: "Cancel"
+  edit: "Edit"
+  delete: "Delete"
+  create: "Create"
+  submit: "Submit"
+  back: "Back"
+  view: "View"
+
+# Languages
+language:
+  french: "Français"
+  english: "English"
+  switch_to_en: "English"
+  switch_to_fr: "Français"
